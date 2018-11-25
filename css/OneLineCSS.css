@@ -1,0 +1,49 @@
+@charset "utf-8";
+/**
+* One Line CSS
+* @author: Rubén Andrés Mendoza Burgos
+* @version: 0.1
+* Public Domain
+*
+**/
+
+*{margin-top:0;padding:0;font-family: 'Open Sans', sans-serif;;box-sizing:border-box;}
+body{margin:0;}
+a{background-color:transparent;}
+a:link,a:visited{text-decoration:none;}
+a:active,a:hover{outline:0;}
+table{border-spacing:0;border-collapse:collapse;}
+td,th{padding:0;}
+button,input,textarea{margin:0;font:inherit;color:inherit;}
+input{margin-top:2%;width:80%;height:30px;border-radius:4px;}
+.bt{border:0;opacity:0.9;cursor:pointer;border-radius:4px;width:80%;height:30px;margin-top:2%;}
+.bt-df{background-color:#4186E4;color:aliceblue;font-style:normal;border-color:#828DE8;}
+.bt-sc{background-color:#3EB430;color:aliceblue;font-style:normal;}
+.bt-wn{background-color:#DB1013;color:aliceblue;font-style:normal;}
+.hl-df{color:#4186E4;} /*High Lightning*/
+.hl-sc{color:#3EB430;} /*High Lightning*/
+.hl-wn{color:#DB1013;} /*High Lightning*/
+.fnt-bold{font-weight:bold;}
+.fnt-nrml{font-style: normal;}
+.ftn-itlc{font-style: italic;}
+.bt:hover{opacity:1;}
+.bt:active{transform: scale(0.95);}
+.center-vertical{margin-top:30%; margin-bottom: 10%; color: #4186E4;} /* Change this if the content goes to the bottom */
+.container{width:80%; display:flex;flex-direction:column;}
+.txt-jtfy{text-align:justify;}
+.txt-cntr{text-align:center; margin-top: 2%;}
+.txt-rght{text-align:right;}
+.txt-left{text-align:left;}
+.txt-ihrt{text-align:inherit;}
+.img-bckg{ width: 100%; height: auto; background-repeat: no-repeat;  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));}
+.transparent {background: rgba(255,255,255,0.5);}
+
+.tlt-info{color: #4186E4; font-size: 150%;}
+.nav-bar{width: 100%; height:7.5%; position: fixed;top:0; background-color: white; z-index: 2;}
+.main{margin-top: 16%;}
+.grupo{width:100%; display: flex; margin-bottom: 3%; position: static;}
+.cont-img{width: 40%; height: 100%; float: left;}
+.img{width: 100%; height: 100%;}
+.info{width: 60%; height: 100%; float:right;font-size: 80%;}
+.info ul {list-style: none; text-align:center; }
+.opaco{ opacity: 0.4;}

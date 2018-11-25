@@ -1,0 +1,126 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,700,500italic,900,700italic,900italic);
+
+
+
+:root{
+
+	--principal: #1b3764;
+	--secundario: #fafccb;
+  --complemento: #faf080;
+	--oscuro: #262228;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; line-height:1.2; vertical-align:middle;
+}
+
+body{
+  background: var(--principal);
+}
+
+label{
+  border: none;
+  color: var(--complemento);
+  margin-bottom: 15%;
+  width: auto;
+}
+
+.title{
+  margin-top: 10%;
+  margin-bottom: 35%;
+}
+h1 {
+  color: var(--secundario);
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 2.4rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--secundario);
+  font-weight:400;
+  line-height: 1.250rem;
+  margin: 0;
+}
+
+
+h2{
+  margin-bottom: 5%;
+}
+.log-form{
+  width: 80%;
+  height: 90%;
+}
+.reg-form{
+  width: 80%;
+  height: 90%;
+}
+input[type="mail"], input[type="password"], input[type="text"]{
+  box-shadow: 0 2px var(--complemento);
+  border: none;
+  background: transparent;
+  margin-bottom: 9%;
+  color: var(--secundario);
+  outline: none;
+}
+
+input[type="submit"]{
+  margin: 5% 25% 15% 20%;
+  width: 60%;
+  height: 11%;
+  color: var(--principal);
+  background: var(--secundario);
+  border-radius: 55px;
+  margin-bottom: 50%;
+  margin-top: 15%;
+}
+
+#reg input[type="submit"]{
+  height: 7%;
+  margin-bottom: 25%;
+}
+
+a{
+  color: var(--complemento);
+}
+#lp{
+  font-size: .9em;
+}
+#mail{
+  margin-left: 10%;
+  width: 65%;
+}
+#pass{
+  margin-left: 2%;
+  width: 65%;
+}
+#nombre{
+  width: 40%;
+  padding-top: 1%;
+  margin-left: 2%;
+  margin-top: 8%;
+}
+#mailReg{
+  width: 60%;
+  padding-top: 1%;
+  margin-top: 8%;
+  margin-left: 2%;
+}
+#pass1, #pass2{
+  width: 40%;
+  padding-top: 1%;
+  margin-left: 2%;
+}
+#reg{
+  display: none;
+}
+#log{
+  height: 60%;
+  display: block;
+  margin-top: 20%;
+}

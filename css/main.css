@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+:root{
+
+	--principal: #1b3764;
+	--secundario: #fafccb;
+	--complemento: #faf080;
+	--oscuro: #262228;
+}
+
+*{
+	margin:0px;
+	padding:0px;
+	font-family: 'Roboto', sans-serif; line-height:1.2; vertical-align:middle;
+	box-sizing:border-box;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+}
+.contenedor{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/fondo.png);
+	left: 0px;
+	background-size: 380%;
+	background-position: -350px 0px;
+}
+.center{
+	background-color: rgba(255,255,255,0.6);
+	width: 90%;
+	position: absolute;
+	left: 5%;
+	top: 20%;
+	border-radius: 10px;
+}
+#logo{
+	position: relative;
+	width: 30%;
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #4186E4;
+}
+table{border-spacing:0;border-collapse:collapse;}
+td,th{padding:0;}
+button,input,textarea{margin:0;font:inherit;color:inherit;}
+input{
+	margin-top:2%;
+	width:80%;
+	height:30px;
+	border:none;
+	background-color: transparent;
+	border-bottom: 2px solid;
+}
+.bt{border:0;opacity:0.9;cursor:pointer;border-radius:4px;width:80%;height:30px;margin-top:2%;}
+.bt-df{
+	background-color:#4186E4;
+	color:aliceblue;
+	font-style:normal;
+	border-color:#828DE8;
+	margin-top: 50px;
+	border: 1px solid;
+}
+.bt-sc{background-color:#3EB430;color:aliceblue;font-style:normal;}
+.bt-wn{background-color:#DB1013;color:aliceblue;font-style:normal;}
+.hl-df{color:#4186E4;} /*High Lightning*/
+.hl-sc{color:#3EB430;} /*High Lightning*/
+.hl-wn{color:#DB1013;} /*High Lightning*/
+.fnt-bold{font-weight:bold;}
+.fnt-nrml{font-style: normal;}
+.ftn-itlc{font-style: italic;}
+.bt:hover{opacity:1;}
+.bt:active{transform: scale(0.95);}
+.center-vertical{ margin-bottom: 10%; color: #4186E4;} /* Change this if the content goes to the bottom */
+.container{width:80%; display:flex;flex-direction:column;}
+.txt-jtfy{text-align:justify;}
+.txt-cntr{
+	text-align:center;
+	margin-top: 2%;
+	color: var(--secundario);
+	font-weight: bolder;
+}
+.txt-rght{text-align:right;}
+.txt-left{text-align:left;}
+.txt-ihrt{text-align:inherit;}
+.img-bckg{ width: 100%; height: auto; background-repeat: no-repeat;  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));}
+.transparent {background: rgba(255,255,255,0.5);}
+
+.tlt-info{
+	color: #ffffff;
+	font-size: 150%;
+}
+
+
+.grupo{
+	position: relative;
+	width:100%;
+	padding: 10px;
+	float: left;
+	margin-top: 10px;
+}
+
+.cont-img{width: 40%; height: 100%; float: left;}
+.img{width: 100%; height: 50%; margin-top: 2%;}
+.info{
+	width: 60%;
+	height: 100%;
+	float:right;
+	font-size: 80%;
+	font-weight: bold;
+}
+.info ul {list-style: none; text-align:center; }
+.opaco{ opacity: 0.4;}
+
+.header{
+	background-color: var(--complemento);
+	height: 100%;
+
+}
+
+.header > h1 {
+	color: var(--principal);
+	width: 40%;
+	position: absolute;
+	left: 30%;
+	font-size: 250%;
+	top: 10%;
+}
+
+.nav-bar{
+	width: 100%;
+	height:7.5%;
+	position: fixed;
+	top:0;
+	z-index: 2;
+	color: white;
+}
+
+.lavado{
+	position: relative;
+	width: 100%;
+	height: 10%;
+}
+
+.titulo{
+	position: absolute;
+	width: 100%;
+	float: left;
+	margin-bottom: 30px;
+	height: 100%;
+	text-align: center;
+	margin-top: 5px;
+	top: 7.5%;
+}
+.primer{
+	left: 0;
+	height: 35%;
+	width: 100%;
+	top: 0;
+	background-color: var(--oscuro);
+	position: absolute;
+}
+.ama{
+	position: absolute;
+	width: 100%;
+	height: 5%;
+}
+.user {
+	position: absolute;
+	bottom: 0px;
+    height: 85%;
+    width: 100%;
+    color: var(--complemento);
+}
+.cosas{
+	position: absolute;
+	bottom: 0;
+	height: 65%;
+	background-color: var(--secundario);
+	width: 100%;
+}
+.titulo > h2{
+	color: white;
+	font-size: 18px;
+	margin-top: 15px;
+}
+
+.main{
+	position: absolute;
+	width: 100%;
+	top: 15%;
+}
+
+#inicio, #paquetes, #servicio, #gracias{
+	width: 100%;
+	height: 100%;
+	background-color: var(--principal);
+}
+
+#pago{
+	position: absolute;
+	top: 30%;
+	width: 80%;
+	left: 10%;
+}
+#pago>input{
+	margin: 10px;
+}
+
+#cuestionario{
+	position: absolute;
+	top: 15%;
+}
