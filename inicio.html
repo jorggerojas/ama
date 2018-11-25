@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Inicio/Sucursales</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+		<script type="text/javascript" src="JS/funciones.js"></script>
+		<script type="text/javascript" src="JS/config.js"></script>
+		<script type="text/javascript" src="JS/grafica/Chart.js"></script>
+		<script type="text/javascript" src="JS/grafica/Chart.bundle.js"></script>
+		<script type="text/javascript" src="JS/grafica/Chart.bundle.min.js"></script>
+		<script type="text/javascript" src="JS/grafica/Chart.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/tarjetas.css">
+		<link rel="stylesheet" type="text/css" href="css/menuDes.css">
+		<link rel="stylesheet" type="text/css" href="css/Fonts/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="css/FontAwesome/fontawesome-all.css">
+		<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval' ; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+	</head>
+	<body id="inicio" onload="grafica(); actualizar(); level();">
+		<form name="filtro" method="get">
+			<!-- Slide bar -->
+			<div id="sidebar" class="sidebar">
+				<div class="primer">
+					<div class="ama" >
+						<h1 class="txt-cntr" id="polo">AMA</h1>
+					</div>
+					<div class="user" >
+						<div id="izq">
+							<img class="img" id="img1" src="img/user.png" style="padding-left:15px;height: 75%;width: 60%;position:  absolute;left: 15%; ">
+							<p style="font-size: 20px; padding-left: 35px; position: absolute; bottom: 0; left: 20%; color: var(--secundario);  " id="level"></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="cosas">
+					<ul class="menu">
+						<br>
+						<i class="fa fa-home" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="inicio.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">     Pagina Principal</a></li><br><br><br>
+						<i class="fa fa-gift" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="promociones.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">		Recompensas</a></li><br><br><br>
+						<i class="fas fa-chart-line" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="Graficos.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">			Ranking</a></li><br><br><br>
+						<i class="fas fa-question-circle" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="acercaDe.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">	  Sobre AMA</a></li><br><br><br>
+
+						<i class="fas fa-sign-out-alt" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="index.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">	Cerrar Sesión</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Fin slidebar -->
+			<div class="nav-bar">
+				<div id="contenido">
+					<i id="abrir" class="abrir-cerrar fas fa-bars" onclick="mostrar()" style="color: var(--principal);"></i>
+					<i id="cerrar" class="abrir-cerrar fas fa-bars" href="#" onclick="ocultar()" style="color: var(--principal);"></i>
+				</div>
+				<div class="header"><h1 class="txt-cntr">AMA</h1></div>
+
+			</div>
+			<div class="titulo">
+				<h2>Resumen de tu consumo</h2>
+			</div>
+			<section class="main"><br><br><br>
+				<div style="position: absolute; top: 0; width: 100%;">
+					<div style="width: 100%;"><center><canvas id="myChart"></canvas></center></div>
+					<center><div style="position: absolute; width: 10%; left: calc(45% - 6px); top: 70px; color: white; text-align: center;"><span id="puntos"></span></div></center>
+				</div><br><br><br><br><br><br><br>
+				<div>
+					<center><p id="nivel" style="color: white; font-size: 18px; font-weight: 800;">Nivel </p></center>
+				</div>
+				<div>
+					<center><p id="puntaje" style="color: white; font-size: 14px; font-weight: 800; "></p></center>
+				</div>
+				<br><br>
+			</section>
+			<article class="tarjetas">
+
+			</article>
+			<div class="consejos">
+				<div class='card' >
+					<h1 style='color: #007849; font-weight: bold; font-size: 20px;'>Consejo en el baño</h1>
+					<h2>Usa regadera para bañarte y evita el uso de bañeras</h2>
+					<h2>Instala regaderas ahorradoras</h2>
+				</div>
+				<div class='card' >
+					<h1 style='color: #007849; font-weight: bold; font-size: 20px;'>Consejo en la cocina</h1>
+					<h2>Lava los vegetales en un recipiente con agua y evita lavarlos directamente bajo el grifo.</h2>
+				</div>
+				<div class='card' >
+					<h1 style='color: #007849; font-weight: bold; font-size: 20px;'>Consejo en el jardín</h1>
+					<h2>Riega el césped y las plantas por las mañanas o noches</h2>
+					<h2>Evita las horas de mayor evaporación del agua</h2>
+				</div>
+			</div>
+
+
+		</form>
+		<script type="text/javascript">window.addEventListener('load', llenado, true);</script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AMA - INGRESAR</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="JS/index.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'
+	'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval' ; connect-src * 'unsafe-inline';
+	img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+</head>
+</head>
+<body>
+	<center>
+		<div class="title">
+			<h1 class="txt-cntr">AMA</h1>
+		</div>
+		<div id="log">
+			<h2>Inicia Sesión</h2>
+			<div class="log-form">
+				<form onsubmit="return false">
+					<label for="mail">Correo :</label>
+					<input type="mail" id="mail" autocomplete="yes">
+					<label for="pass" id="lp">Contraseña :</label>
+					<input type="password" id="pass">
+					<input type="submit" value="Iniciar sesión" onclick="intro(1)">
+					<a onclick="chaLogReg(2)" id="aLog">¿No tienes cuenta con nostros? ¡Haz tu registro ahora!</a>
+				</form>
+			</div>
+		</div>
+		<div id="reg">
+			<h2>Registro</h2>
+			<div class="reg-form">
+				<form onsubmit="return false">
+					<label for="nombre" style="margin-left: 3%;">Nombre Completo :</label>
+					<input type="text" id="nombre">
+					<label for="mail" id="lm">Correo :</label>
+					<input type="mail" id="mailReg"><br>
+					<label for="pass1" style="font-size: .7em;">Crea una contraseña :</label>
+					<input type="password" id="pass1"><br>
+					<label for="pass2" style="font-size: .7em;">Confirma tu contraseña :</label>
+					<input type="password" id="pass2">
+					<input type="submit" value="Registrarme" onclick="intro(2)">
+					<a onclick="chaLogReg(1)">¿Ya tienes cuenta? ¡Inicia sesión!</a>
+				</form>
+			</div>
+		</div>
+	</center>
+</body>
+</html>

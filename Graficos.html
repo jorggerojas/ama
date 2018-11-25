@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Inicio/Sucursales</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="JS/grafica/Chart.js"></script>
+		<script type="text/javascript" src="JS/grafica/Chart.bundle.js"></script>
+		<script type="text/javascript" src="JS/grafica/Chart.bundle.min.js"></script>
+		<script type="text/javascript" src="JS/grafica/Chart.min.js"></script>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/promociones.css">
+		<link rel="stylesheet" type="text/css" href="css/menuDes.css">
+		<link rel="stylesheet" type="text/css" href="css/tarjetas.css">
+		<link rel="stylesheet" type="text/css" href="css/promociones.css">
+		<link rel="stylesheet" type="text/css" href="css/Fonts/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="css/FontAwesome/fontawesome-all.css">
+		<script type="text/javascript" src="JS/funciones.js"></script>
+		<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval' ; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+	</head>
+	<body id="inicio" onload="compara(), level()">
+		<div id="sidebar" class="sidebar">
+				<div class="primer">
+					<div class="ama" >
+						<h1 class="txt-cntr">AMA</h1>
+					</div>
+					<div class="user" >
+						<div id="izq">
+							<img class="img" id="img1" src="img/user.png" style="padding-left:15px;height: 75%;width: 60%;position:  absolute;left: 15%; ">
+							<p style="font-size: 20px; padding-left: 35px; position: absolute; bottom: 0; left: 20%; color: var(--secundario);  " id="level"></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="cosas">
+					<ul class="menu">
+						<br>
+						<i class="fa fa-home" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="inicio.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">     Pagina Principal</a></li><br><br><br>
+						<i class="fa fa-gift" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="promociones.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">		Recompensas</a></li><br><br><br>
+						<i class="fas fa-chart-line" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="Graficos.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">			Ranking</a></li><br><br><br>
+						<i class="fas fa-question-circle" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="acercaDe.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">	  Sobre AMA</a></li><br><br><br>
+
+						<i class="fas fa-sign-out-alt" style="font-size: 25px; float: left; margin-top: 5px;"></i><li><a href="index.html" style="width: 80%; float: left; margin-left: 10px; font-size: 22px;">	Cerrar Sesión</a></li>
+					</ul>
+				</div>
+			</div>
+		<div class="nav-bar">
+			<div id="contenido">
+				<i id="abrir" class="abrir-cerrar fas fa-bars" onclick="mostrar()" style="color: var(--principal);"></i>
+				<i id="cerrar" class="abrir-cerrar fas fa-bars" onclick="ocultar()" style="color: var(--principal);"></i>
+			</div>
+			<div class="header"><h1 class="txt-cntr">AMA</h1></div>
+
+		</div>
+		<center>
+			<b><h1 style="color: white; font-weight: 600;margin-top: 20%;">Ranking</h1></b>
+		</center>
+		<div class='card' style="margin-bottom: 10%;">
+			<h1 style='color: #007849; font-weight: bold; font-size: 18px;'>Datos en comparación</h1>
+			<h2 style="font-weight: bold;">Queremos mostrarte un poco de lo que hemos detectado desde que usas AMA:</h2><br>
+			<h2>En la siguiente gráfica podrás observar un comparativo de consumo de agua que se ha detectado con perosnas
+			que tienen una cantidad de consumo (en litros) similar a la tuya en casa.</h2><br>
+			<h2 style="font-weight: bold;">Mientras hagas uso de AMA podrás seguir comparando el consumo</h2>
+		</div>
+		<div class="contiene" style="margin-left: 1%;">
+			<center><div style="width: 90%;"><canvas id="caca"></canvas></div></center>
+		</div><br><br>
+	</body>
+</html>

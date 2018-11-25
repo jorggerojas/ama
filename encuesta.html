@@ -1,0 +1,181 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AMA - ENCUESTA</title>
+  <link rel="stylesheet" href="css/encuesta.css">
+  <script type="text/javascript" src="JS/encuesta.js"></script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'
+	'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval' ; connect-src * 'unsafe-inline';
+	img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+</head>
+
+<body>
+  <div class='card' id="card">
+    <div class="content">
+      <center>
+        <h1>Encuesta para el uso de AMA</h1><br>
+      </center>
+      <h2>La siguiente encuesta tiene como objetivo fijar parámetros iniciales del sistema y
+        así poder adaptarnos a tus necesidades.</h2><br>
+      <h2>No importa si vives con 4 personas, si vives solo, si tienes mascotas o un gran jardín</h2><br>
+      <center>
+        <h2 style="font-weight: bold;">¡Ayuda a tu ecosistema y tu bolsillo!</h2>
+      </center><br><br>
+      <button onclick="btnSigEn(1);">Siguiente</button>
+    </div>
+  </div>
+
+  <div class="cuestionario" id="cuestionario">
+    <center>
+      <div class="tabla">
+        <table class="tg">
+          <tr>
+            <th class="tg-uys7" colspan="2">Cuestionario AMA</th>
+          </tr>
+          <tr>
+            <td class="tg-0pky">1. ¿Cuántas personas viven <br>&nbsp;&nbsp;&nbsp;&nbsp;en tu casa (contando tu presencia)?</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p1">
+                <option disabled selected value="n">Elige una opción</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 o más</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">2. ¿Cuántos baños completos (W.C., regadera y lavabo) <br> tienes en casa?</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p2">
+                <option disabled selected value="n">Elige una opción</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3 o más</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">3. ¿Cuántos baños medios (W.C. y lavabo <br> o solo W.C.) tienes en casa?</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p3">
+                <option disabled selected value="n">Elige una opción</option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="4">3 o más</option>
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">4. ¿Tienes jardín o un número grande de plantas en casa?</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p4">
+                <option disabled selected value="n">Elige una opción</option>
+                  <option value="0">Ninguna</option>
+                  <option value="1">Sí, un jardín</option>
+                  <option value="2">Sí, flores</option>
+                  <option value="3">Sí, las dos</option>
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">5. ¿Cuántas mascotas tienes en casa?</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p5">
+                <option disabled selected value="n">Elige una opción</option>
+                  <option value="0">Ninguna</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 o más</option>
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">6. Aproximadamente ¿cuánto tiempo tarda cada <br> persona en bañarse?</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p6">
+                <option disabled selected value="n">Elige una opción</option>
+                  <option value="0">5 minutos</option>
+                  <option value="1">10 minutos</option>
+                  <option value="2">15 minutos</option>
+                  <option value="3">20 minutos</option>
+                  <option value="4">+20 minutos</option>
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">7. En caso de que cuentes con carro y <br> lo laves en casa ¿con qué lo lavas?</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p7">
+                <option disabled selected value="n">Elige una opción</option>
+                  <option value="0">No lo lavo en casa</option>
+                  <option value="0">Cubeta y trapos</option>
+                  <option value="1">Máquina</option>
+                  <option value="2">Manguera</option>
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">8. ¿Cuánto es el pago promedio mensual por el uso<br> de agua en casa? (MXN)</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p8">
+                <option disabled selected value="n">Elige una opción</option>
+                  <option value="0">Menor a $100</option>
+                  <option value="1">$100 - $150</option>
+                  <option value="2">$150 - $200</option>
+                  <option value="3">Más de $200</option>
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">9. ¿Tienes visitas frecuentes en casa? (Semanales)</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p9">
+                <option disabled selected value="n">Elige una opción</option>
+                  <option value="0">No</option>
+                  <option value="1">Una vez</option>
+                  <option value="2">Dos veces</option>
+                  <option value="3">Muchas veces</option>
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-0pky">10. ¿Sufres de fugas de agua o<br> desperfectos en tuberías, regaderas, lavabos, etc.<br> en casa de manera frecuente?</td>
+            <td class="tg-c3ow">
+              <select class="select" id="p10">
+                <option disabled selected value="n">Elige una opción</option>
+                  <option value="0">No, ninguna</option>
+                  <option value="1">Muy poco</option>
+                  <option value="2">Muy seguido</option>
+                </option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="2" class="tg-uys7">
+              <button class="btnContinuar" onclick="getValues()">Continuar</button>
+              <button class="btnAtras" onclick="btnSigEn(2);">Regresar</button>
+            </th>
+          </tr>
+        </table>
+      </div>
+    </center>
+  </div>
+</body>
+
+</html>
