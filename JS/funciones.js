@@ -172,6 +172,7 @@ function actualizar() {
 	inicioAjax.open('GET', 'https://jorggerojas.000webhostapp.com/ama/valor.php');
 	inicioAjax.send();
 	inicioAjax.onreadystatechange = function(){
+			console.log(inicioAjax.status);
 		if (inicioAjax.readyState == 4 && inicioAjax.status == 200) {
 				inicio = JSON.parse(inicioAjax.responseText);
 				bandera = parseInt(inicio.consumoMax);
@@ -185,7 +186,7 @@ function actualizar() {
 			setTimeout(function(){
 				console.log("actualizando");
 				actualizar();
-			},5000);
+			},4000);
 
 		}
 	}
@@ -193,14 +194,17 @@ function actualizar() {
 }
 function compara() {
 	var dato;
+	var correo = localStorage.getItem('Mail');
+	var link = 'correo='+correo;
 	inicioAjax = new XMLHttpRequest();
-	inicioAjax.open('GET', 'https://jorggerojas.000webhostapp.com/ama/valor.php');
-	inicioAjax.send();
+	inicioAjax.open('POST', 'https://jorggerojas.000webhostapp.com/ama/valor.php');
+	inicioAjax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+	inicioAjax.send(link);
 	inicioAjax.onreadystatechange = function(){
 		if (inicioAjax.readyState == 4 && inicioAjax.status == 200) {
 			d = JSON.parse(inicioAjax.responseText);
 			dato = parseInt(d.consumoDia);
-			console.log(dato);
+			console.log(d);
 		var ctx = document.getElementById("caca");
 		ctx.height=400;
 
